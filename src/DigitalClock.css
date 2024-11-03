@@ -1,0 +1,72 @@
+
+body {
+    background: linear-gradient(to right, pink, lightblue);
+}
+
+.flip-clock-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+  }
+  
+  .flip-clock {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .flip-digit {
+    font-size: 5rem;
+    color: #333; 
+    font-family : 'Courier New', Courier, monospace; 
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 80px;
+  }
+  
+  .flip-digit::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e0e0e0; 
+    transform: translateY(-50%);
+  }
+  
+  .flip-digit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #f7f7f7; 
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-50%) rotateX(90deg);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+  
+  .flip-digit span {
+    display: block;
+  }
+   
+
+  .flip-date {
+    font-size: 2.5em;
+    margin-top: 5px;
+    color: #555; 
+    padding-left: 30px;
+    
+}

@@ -1,12 +1,12 @@
-import React from 'react'
-import Clock from './Components/Clock'
+import React from 'react';
+import DigitalClock from './DigitalClock';
 
-function app() {
+function App() {
   return (
     <div>
-        <Clock />
+      <DigitalClock />
     </div>
-  )
+  );
 }
 
-export default app
+export default App;
